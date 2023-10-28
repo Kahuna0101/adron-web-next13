@@ -70,9 +70,9 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col w-full bg-white text-gray-700 rounded-lg shadow shadow-green-300 p-7 gap-4"
+        className="flex flex-col w-full text-gray-700 rounded-lg shadow shadow-green-300 p-7 gap-4"
       >
-        <FormLabel className="font-bold text-2xl text-black">
+        <FormLabel className="font-bold text-2xl dark:text-slate-50">
           Contact Us
         </FormLabel>
         <div className="border w-full" />
@@ -81,7 +81,7 @@ const ContactForm = () => {
           name="name"
           render={({ field }) => (
             <FormItem className="flex flex-col w-full">
-              <FormLabel className="text-lg font-medium">Name</FormLabel>
+              <FormLabel className="text-lg font-medium dark:text-slate-50">Name</FormLabel>
               <FormControl>
                 <Input
                   type="text"
@@ -100,7 +100,7 @@ const ContactForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem className="flex flex-col w-full">
-              <FormLabel className="text-lg font-medium">Email</FormLabel>
+              <FormLabel className="text-lg font-medium dark:text-slate-50">Email</FormLabel>
               <FormControl>
                 <Input
                   type="email"
@@ -119,7 +119,7 @@ const ContactForm = () => {
           name="phone"
           render={({ field }) => (
             <FormItem className="flex flex-col w-full">
-              <FormLabel className="text-lg font-medium">
+              <FormLabel className="text-lg font-medium dark:text-slate-50">
                 Phone Number
               </FormLabel>
               <FormControl>
@@ -140,13 +140,13 @@ const ContactForm = () => {
           name="message"
           render={({ field }) => (
             <FormItem className="flex flex-col w-full">
-              <FormLabel className="text-lg font-medium">Message</FormLabel>
+              <FormLabel className="text-lg font-medium dark:text-slate-50">Message</FormLabel>
               <FormControl>
                 <Textarea
                   rows={5}
                   placeholder="Type in your Message"
                   {...field}
-                  className="account-form_input no-focus"
+                  className="account-form_input no-focus dark:text-slate-50"
                 />
               </FormControl>
               <FormMessage />

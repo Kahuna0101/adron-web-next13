@@ -48,13 +48,13 @@ const PropertyCard = ({
           </div>
 
           <TooltipProvider>
-            <Tooltip>
+            <Tooltip >
               <TooltipTrigger className="flex justify-start">
                 <CardTitle className="text-xl font-bold uppercase hover:text-green-600 truncate">
                 {title}
                 </CardTitle>
               </TooltipTrigger>
-              <TooltipContent className="bg-green-300">
+              <TooltipContent className="bg-green-300 dark:bg-green-500 absolute">
                 <p className="text-xl font-bold uppercase">{title}</p>
               </TooltipContent>
             </Tooltip>

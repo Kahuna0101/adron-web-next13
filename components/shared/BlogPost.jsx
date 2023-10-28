@@ -17,7 +17,7 @@ const BlogPost = ({ image, description, title }) => {
           />
         </CardHeader>
         <CardContent>
-          <p className="mt-9 text-slate-500 text-2xl">{description}</p>
+          <p className="mt-9 text-slate-500 text-2xl dark:text-slate-50">{description}</p>
         </CardContent>
       </Card>
 

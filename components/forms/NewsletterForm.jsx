@@ -62,7 +62,7 @@ const NewsletterForm = () => {
 
   if (isSubmitted) {
     return (
-      <Alert className=" border-green-500/50 text-green-600 [&>svg]:text-green-600">
+      <Alert className="border-green-500/50 text-green-600 dark:text-green-600 [&>svg]:text-green-600 dark:[&>svg]:text-green-600">
         <CheckCircle className="h-5 w-5" />
         <AlertTitle className="text-xl">Submit Successful!</AlertTitle>
         <AlertDescription className="text-lg">

@@ -20,15 +20,15 @@ export default async function Page({ params }) {
           <div className="flex text-sm md:text-lg font-semibold">
             <div className="mx-0 md:mx-5">
               <p>Author :</p>
-              <p className="text-gray-600">Adron Homes</p>
+              <p className="text-gray-500">Adron Homes</p>
             </div>
             <div className="mx-5">
               <p>Category :</p>
-              <p className="text-gray-600 capitalize">{blog.tags}</p>
+              <p className="text-gray-500 capitalize">{blog.tags}</p>
             </div>
             <div className="mx-5">
               <p>Date :</p>
-              <p className="text-gray-600">{blog.date.substring(0, 10)}</p>
+              <p className="text-gray-500">{blog.date.substring(0, 10)}</p>
             </div>
           </div>
         </div>

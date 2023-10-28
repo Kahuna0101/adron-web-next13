@@ -8,11 +8,11 @@ export default async function FeaturedProperties() {
 
   return (
     <section id="featured">
-      <div className="w-full text-gray-600 p-12 md:p-36">
-        <h2 className="text-4xl sm:text-5xl font-light px-8 text-center">
+      <div className="w-full p-12 md:p-36">
+        <h2 className="text-5xl sm:text-5xl px-8 text-center md:text-6xl font-medium">
           Discover Our Featured Properties
         </h2>
-        <p className="text-2xl font-light mt-4 mb-8 px-8 text-center">
+        <p className="text-2xl font-normal mt-4 mb-8 px-8 text-center">
           A selection of our best properties
         </p>
         <PropertySlider featuredProperties={result} />

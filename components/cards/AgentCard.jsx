@@ -9,9 +9,9 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-const AgentCard = ({ name, image, description, title, social, id }) => {
+const AgentCard = ({ name, image, description, title, social }) => {
   return (
-    <Card className="shadow-md transition-transform duration-200 hover:scale-105">
+    <Card className="shadow-md dark:shadow-slate-800 transition-transform duration-200 hover:scale-105">
       <CardHeader>
         <div className="h-20 w-20 relative mb-3">
           <Image
@@ -24,7 +24,7 @@ const AgentCard = ({ name, image, description, title, social, id }) => {
         </div>
 
         <CardTitle className="text-green-700">{name}</CardTitle>
-        <CardDescription className="text-md text-green-500">
+        <CardDescription className="text-md text-green-500 dark:text-slate-50">
           {title}
         </CardDescription>
       </CardHeader>
@@ -37,7 +37,7 @@ const AgentCard = ({ name, image, description, title, social, id }) => {
             key={item.link}
             href={item.link}
             target="_blank"
-            className="first:hover:bg-blue-500 even:hover:bg-slate-200 last:hover:bg-gradient-to-r from-purple-400 to-pink-400 rounded-md p-2 shadow-md border-slate-300"
+            className="first:hover:bg-blue-500 even:hover:bg-slate-300 last:hover:bg-gradient-to-r from-purple-400 to-pink-400 rounded-md p-2 shadow-md border-slate-300 dark:bg-current"
           >
             <Image
               src={item.icon}

@@ -16,7 +16,7 @@ const Testimonials = () => {
 
       <div className="flex justify-center mt-7">
         <Link href="/testimonials">
-          <Button className="text-white bg-green-500 hover:bg-green-400 py-4 px-6 text-lg font-semibold transition-transform transform hover:scale-105">
+          <Button className="text-white bg-green-500 hover:bg-green-600 py-4 px-6 text-lg font-semibold transition-transform transform hover:scale-105">
             View More
           </Button>
         </Link>

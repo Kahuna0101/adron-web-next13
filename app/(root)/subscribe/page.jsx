@@ -19,7 +19,7 @@ const page = () => {
           <div className="flex flex-col lg:flex-row gap-7">
             <div className="w-full">
               <SubscriptionForm />
-              <p className="font-medium text-gray-500 text-center mt-2">
+              <p className="font-medium text-gray-500 text-center mt-2 dark:text-slate-50">
                 Our Sales Agent will get back to you in 1-2 business days.
               </p>
             </div>

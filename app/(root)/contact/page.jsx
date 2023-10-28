@@ -8,10 +8,10 @@ const Page = () => {
     <section className="w-full p-12 md:p-36">
       <div className="w-full flex flex-col xl:flex-row mt-24 md:mt-5 gap-5">
         <div className="flex flex-1 flex-col w-full">
-          <h2 className="font-bold text-gray-800 text-4xl mb-4">
+          <h2 className="font-bold text-4xl mb-4">
             Get In Touch
           </h2>
-          <p className="font-medium text-gray-600 text-lg mb-4">
+          <p className="font-medium text-gray-500 text-lg mb-4">
             We'd love to talk about how we can help you.
           </p>
           <iframe
@@ -28,7 +28,7 @@ const Page = () => {
               <h3 className="text-2xl font-semibold">Call us:</h3>
               <Link
                 href="tel:+234 9018604383"
-                className="text-base font-medium text-gray-600"
+                className="text-base font-medium text-gray-500"
               >
                 +234 9018604383
               </Link>
@@ -36,7 +36,7 @@ const Page = () => {
 
             <div>
               <h3 className="text-2xl font-semibold">Address:</h3>
-              <p className="text-base font-medium text-gray-600">
+              <p className="text-base font-medium text-gray-500">
                 75, Adron Court, Adeyemo Akapo, Omole Phase 1, Lagos.
               </p>
             </div>
@@ -46,7 +46,7 @@ const Page = () => {
               <Link
                 href="mailto:clientservice@adronhomesproperties.com"
                 target="_blank"
-                className="text-base font-medium text-gray-600"
+                className="text-base font-medium text-gray-500"
               >
                 clientservice@adronhomesproperties.com
               </Link>
@@ -63,10 +63,10 @@ const Page = () => {
       </div>
 
       <div className="m-auto mt-10">
-        <h2 className="font-medium text-gray-600 text-xl text-center">
+        <h2 className="font-medium text-gray-500 text-xl text-center">
           VISIT US AT OUR
         </h2>
-        <p className="font-bold text-gray-800 text-4xl text-center">
+        <p className="font-bold text-4xl text-center">
           Office Locations
         </p>
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 md: mx-auto w-full mt-5">

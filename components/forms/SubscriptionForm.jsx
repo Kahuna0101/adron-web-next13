@@ -113,9 +113,9 @@ const SubscriptionForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col w-full bg-white text-gray-700 rounded-lg shadow shadow-green-300 p-7 gap-4"
+        className="flex flex-col w-full text-gray-700 rounded-lg shadow shadow-green-300 p-7 gap-4"
       >
-        <FormLabel className="font-bold text-2xl text-black">
+        <FormLabel className="font-bold text-2xl dark:text-slate-50">
           Begin that Conversation Today!!!
         </FormLabel>
         <div className="border w-full" />
@@ -124,7 +124,7 @@ const SubscriptionForm = () => {
           name="name"
           render={({ field }) => (
             <FormItem className="flex flex-col w-full">
-              <FormLabel className="text-lg font-medium">Name</FormLabel>
+              <FormLabel className="text-lg font-medium dark:text-slate-50">Name</FormLabel>
               <FormControl>
                 <Input
                   type="text"
@@ -144,7 +144,7 @@ const SubscriptionForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem className="flex flex-col w-full">
-                <FormLabel className="text-lg font-medium">Email</FormLabel>
+                <FormLabel className="text-lg font-medium dark:text-slate-50">Email</FormLabel>
                 <FormControl>
                   <Input
                     type="email"
@@ -163,7 +163,7 @@ const SubscriptionForm = () => {
             name="phone"
             render={({ field }) => (
               <FormItem className="flex flex-col w-full">
-                <FormLabel className="text-lg font-medium">
+                <FormLabel className="text-lg font-medium dark:text-slate-50">
                   Phone Number
                 </FormLabel>
                 <FormControl>
@@ -185,12 +185,12 @@ const SubscriptionForm = () => {
           name="estate"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-lg font-medium">
+              <FormLabel className="text-lg font-medium dark:text-slate-50">
                 Estate Interested In:
               </FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select an Estate" />
+                <SelectTrigger className="w-full font-semibold dark:text-slate-50">
+                  <SelectValue placeholder="Select an Estate"/>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectViewport
@@ -199,7 +199,7 @@ const SubscriptionForm = () => {
                     <SelectGroup>
                       <SelectLabel>Estates</SelectLabel>
                       {estates.map((estate) => (
-                        <SelectItem key={estate.id} value={estate.value}>
+                        <SelectItem key={estate.id} value={estate.value} className="account-form_input no-focus">
                           {estate.name}
                         </SelectItem>
                       ))}
@@ -217,7 +217,7 @@ const SubscriptionForm = () => {
             name="plot"
             render={({ field }) => (
               <FormItem className="flex flex-col w-full">
-                <FormLabel className="text-lg font-medium">
+                <FormLabel className="text-lg font-medium dark:text-slate-50">
                   No of Plot
                 </FormLabel>
                 <FormControl>
@@ -225,7 +225,7 @@ const SubscriptionForm = () => {
                     type="number"
                     placeholder="Plot No"
                     {...field}
-                    className="account-form_input no-focus"
+                    className="account-form_input no-focus dark:text-slate-50"
                   />
                 </FormControl>
                 <FormMessage />
@@ -239,7 +239,7 @@ const SubscriptionForm = () => {
             render={({ field }) => (
               <FormItem className="flex flex-col w-full">
                 <div className="mb-4">
-                  <FormLabel className="text-lg font-medium">
+                  <FormLabel className="text-lg font-medium dark:text-slate-50">
                     Are you a new or existing customer?
                   </FormLabel>
                 </div>
@@ -281,7 +281,7 @@ const SubscriptionForm = () => {
           name="message"
           render={({ field }) => (
             <FormItem className="flex flex-col w-full">
-              <FormLabel className="text-lg font-medium">
+              <FormLabel className="text-lg font-medium dark:text-slate-50">
                 Questions & Comments
               </FormLabel>
               <FormControl>
@@ -289,7 +289,7 @@ const SubscriptionForm = () => {
                   rows={5}
                   placeholder="Type in your Message"
                   {...field}
-                  className="account-form_input no-focus"
+                  className="account-form_input no-focus dark:text-slate-50"
                 />
               </FormControl>
               <FormMessage />
@@ -303,7 +303,7 @@ const SubscriptionForm = () => {
           render={({ field }) => (
             <FormItem>
               <div className="mb-4">
-                <FormLabel className="text-lg font-medium">
+                <FormLabel className="text-lg font-medium dark:text-slate-50">
                   Preferred Mode of Contact
                 </FormLabel>
               </div>

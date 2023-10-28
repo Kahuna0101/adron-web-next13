@@ -67,9 +67,9 @@ const CommentForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col w-full bg-white text-gray-700 rounded-lg shadow p-7 gap-4"
+        className="flex flex-col w-full shadow-green-300 text-gray-700 rounded-lg shadow p-7 gap-4"
       >
-        <FormLabel className="font-bold text-2xl text-black">
+        <FormLabel className="font-bold text-2xl dark:text-slate-50">
           Leave A Comment:
         </FormLabel>
         <div className="border w-full" />
@@ -80,7 +80,7 @@ const CommentForm = () => {
             name="name"
             render={({ field }) => (
               <FormItem className="flex flex-col w-full md:w-1/2">
-                <FormLabel className="text-lg font-medium">Name</FormLabel>
+                <FormLabel className="text-lg font-medium dark:text-slate-50">Name</FormLabel>
                 <FormControl>
                   <Input
                     type="text"
@@ -99,7 +99,7 @@ const CommentForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem className="flex flex-col w-full md:w-1/2">
-                <FormLabel className="text-lg font-medium">Email</FormLabel>
+                <FormLabel className="text-lg font-medium dark:text-slate-50">Email</FormLabel>
                 <FormControl>
                   <Input
                     type="email"
@@ -119,13 +119,13 @@ const CommentForm = () => {
           name="message"
           render={({ field }) => (
             <FormItem className="flex flex-col w-full">
-              <FormLabel className="text-lg font-medium">Message</FormLabel>
+              <FormLabel className="text-lg font-medium dark:text-slate-50">Message</FormLabel>
               <FormControl>
                 <Textarea
                   rows={5}
                   placeholder="Comment:"
                   {...field}
-                  className="account-form_input no-focus"
+                  className="account-form_input no-focus dark:text-slate-50"
                 />
               </FormControl>
               <FormMessage />

@@ -61,7 +61,7 @@ export default async function Page({ params }) {
                   <div className="border w-full mt-3" />
                 </CardTitle>
               </CardHeader>
-              <CardContent className="flex flex-wrap justify-start items-start capitalize text-lg font-normal text-gray-500">
+              <CardContent className="flex flex-wrap justify-start items-start capitalize text-lg font-medium text-slate-500 dark:text-slate-200">
                 {property.description}
               </CardContent>
             </Card>
@@ -77,7 +77,7 @@ export default async function Page({ params }) {
                   <div className="border w-full mt-3" />
                 </CardTitle>
               </CardHeader>
-              <CardContent className="grid grid-cols-1 lg:grid-cols-2 capitalize text-lg font-bold text-gray-500 gap-2">
+              <CardContent className="grid grid-cols-1 lg:grid-cols-2 capitalize text-lg font-bold text-gray-500 gap-2 dark:text-slate-300">
                 <p>
                   Legal Documentation: ₦ {property.legalDoc.toLocaleString()}
                 </p>
@@ -120,7 +120,7 @@ export default async function Page({ params }) {
                 </p>
               </CardContent>
               <CardFooter>
-                <p className="font-semibold text-lg text-gray-600">Note: ₦ 0 means "To be Determined after physical allcation, subject to prevailing Govt. Assessment</p>
+                <p className="font-semibold text-lg text-gray-500 dark:text-slate-400">Note: ₦ 0 means "To be Determined after physical allcation, subject to prevailing Govt. Assessment</p>
               </CardFooter>
             </Card>
           ) : (

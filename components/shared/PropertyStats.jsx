@@ -12,7 +12,7 @@ const PropertyStats = ({
   return (
     <section className="p-6 mb-6">
       {propertyType === "land" ? (
-        <div className="flex flex-col sm:flex-row items-center justify-around text-lg lg:text-xl font-bold text-gray-500 gap-6">
+        <div className="flex flex-col sm:flex-row items-center justify-around text-lg lg:text-xl font-bold text-gray-500 gap-6 dark:text-slate-50">
           <div className="flex flex-col items-center gap-3">
             <span>SIZE</span>
             <div className="flex items-center gap-2">
@@ -38,7 +38,7 @@ const PropertyStats = ({
           </div>
         </div>
       ) : (
-        <div className="flex flex-col sm:flex-row items-center justify-around text-lg lg:text-xl font-bold text-gray-500 gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-around text-lg lg:text-xl font-bold text-gray-500 gap-4 dark:text-slate-50">
           <div className="flex flex-col items-center gap-3">
             <span>BEDS</span>
             <div className="flex items-center gap-2">

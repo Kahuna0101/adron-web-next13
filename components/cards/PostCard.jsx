@@ -31,7 +31,7 @@ const PostCard = ({ id, photo, title, body, date, tag }) => {
                 {title}
                 </CardTitle>
               </TooltipTrigger>
-              <TooltipContent className="bg-green-300">
+              <TooltipContent className="bg-green-300 dark:bg-green-500">
                 <p className="text-xl font-bold uppercase">{title}</p>
               </TooltipContent>
             </Tooltip>

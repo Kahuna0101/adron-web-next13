@@ -77,7 +77,7 @@ function Hero() {
                 <CountUp start={9500} end={10000} duration={4} />
                 <span className="text-green-500">+</span>
               </div>
-              <p className="text-lg text-gray-600">Sold Products</p>
+              <p className="text-lg text-gray-500">Sold Products</p>
             </div>
 
             <div className="flex items-center flex-col mt-4 sm:mt-0">
@@ -85,14 +85,14 @@ function Hero() {
                 <span>90</span>
                 <span className="text-green-500">%</span>
               </div>
-              <p className="text-lg text-gray-600">Happy Clients</p>
+              <p className="text-lg text-gray-500">Happy Clients</p>
             </div>
 
             <div className="flex items-center flex-col mt-4 sm:mt-0">
               <div className="flex items-center text-3xl gap-1">
                 <CountUp end={11} />
               </div>
-              <p className="text-lg text-gray-600 text-center">
+              <p className="text-lg text-gray-500 text-center">
                 Years in the <br /> Real-Estate Business
               </p>
             </div>

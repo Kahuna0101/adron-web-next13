@@ -45,15 +45,15 @@ export default async function RecentPosts() {
               key={social.id}
               href={social.link}
               target="_blank"
-              className={`p-2 rounded-full shadow-md border-slate-300 transition duration-300 ease-in-out 
-                    ${index === 1 ? "hover:bg-blue-500" : ""}
-                    ${index === 2 ? "hover:bg-slate-200" : ""}
-                    ${index === 3 ? "hover:bg-red-500" : ""}
+              className={`p-2 rounded-full shadow-md border-slate-300 transition duration-300 ease-in-out
+                    ${index === 1 ? "hover:bg-blue-500 dark:hover:bg-blue-500" : ""}
+                    ${index === 2 ? "hover:bg-slate-300 dark:hover:bg-slate-300" : ""}
+                    ${index === 3 ? "hover:bg-red-500 dark:hover:bg-red-500" : ""}
                     ${
                       index === 4
                         ? "hover:bg-gradient-to-r from-purple-400 to-pink-400"
                         : ""
-                    }`}
+                    } dark:bg-current`}
             >
               <Image
                 src={social.icon}
