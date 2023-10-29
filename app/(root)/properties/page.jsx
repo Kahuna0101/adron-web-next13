@@ -1,6 +1,10 @@
 import AllProperties from "@/components/shared/AllProperties";
 import { getProperties } from "@/lib/actions/property.actions";
 
+export const metadata = {
+  title: 'Properties',
+}
+
 export default async function Page() {
   const properties = await getProperties();
 

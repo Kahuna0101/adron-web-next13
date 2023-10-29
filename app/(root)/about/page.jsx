@@ -1,11 +1,14 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import CountUp from "react-countup";
 import { Button } from "@/components/ui/button";
 import { agents, objectives } from "@/constants";
 import AgentCard from "@/components/cards/AgentCard";
+import Counter from "@/components/shared/Counter";
+
+export const metadata = {
+  title: 'About',
+}
+
 
 const Page = () => {
   return (
@@ -27,7 +30,7 @@ const Page = () => {
               alt={objective.title}
               className="w-auto h-auto"
             />
-            <div>
+          <div>
               <h3 className="text-2xl font-semibold">{objective.title}</h3>
               <p className="text-lg text-gray-500">{objective.description}</p>
             </div>
@@ -37,16 +40,16 @@ const Page = () => {
 
       <div className="flex flex-col md:flex-row justify-center items-center my-[90px] gap-20">
         <div className="flex flex-col items-center">
-          <CountUp end={11} className="text-4xl font-semibold" />
+          <Counter end={11}/>
           <p className="text-3xl font-semibold text-slate-500 text-center">
             Years in the <br /> Real-Estate Business
           </p>
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="flex justify-center items-center gap-2 text-4xl font-semibold">
-            <CountUp start={9500} end={10000} duration={4} />
-            <span>+</span>
+          <div className="flex justify-center items-center gap-2">
+            <Counter start={9500} end={10000} duration={4} />
+            <span className="text-4xl font-semibold">+</span>
           </div>
           <p className="text-3xl font-semibold text-slate-500 text-center">
             Sold Products

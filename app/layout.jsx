@@ -2,8 +2,12 @@ import { ThemeProvider } from '@/components/theme-provider'
 import '@/styles/globals.css'
 
 export const metadata = {
-  title: 'Adron Homes',
+  title:{
+    template: '%s | Adron Homes',
+    default: 'Adron Homes & Properties',
+  },
   description: 'Adron Homes and Properties',
+  keywords: ['properties', 'sale', 'emmanuelking', 'adron', 'realestate', 'lands', 'homes', 'intelligent', 'aderonke', 'olori'],
   other: {
     'theme-color': "#0d1117",
     "color-scheme": "dark only",

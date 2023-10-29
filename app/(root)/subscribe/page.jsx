@@ -1,6 +1,10 @@
 import SubscriptionForm from "@/components/forms/SubscriptionForm";
 import RecentProperties from "@/components/shared/RecentProperties";
 
+export const metadata = {
+  title: 'Subscribe',
+}
+
 const page = () => {
   return (
     <section>

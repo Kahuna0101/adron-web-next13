@@ -3,6 +3,10 @@ import ContactLocation from "@/components/shared/ContactLocation";
 import { locations } from "@/constants";
 import Link from "next/link";
 
+export const metadata = {
+  title: 'Contact',
+}
+
 const Page = () => {
   return (
     <section className="w-full p-12 md:p-36">

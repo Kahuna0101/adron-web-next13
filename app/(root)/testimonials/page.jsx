@@ -1,6 +1,10 @@
 import TestimonialCard from "@/components/cards/TestimonialCard";
 import { testimonials } from "@/constants";
 
+export const metadata = {
+  title: 'Testimonials',
+}
+
 const page = () => {
   return (
     <section>

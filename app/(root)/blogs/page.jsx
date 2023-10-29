@@ -1,6 +1,10 @@
 import AllPosts from "@/components/shared/AllPosts";
 import { getPosts } from "@/lib/actions/blog.action";
 
+export const metadata = {
+  title: 'Blogs',
+}
+
 export default async function Page() {
   const posts = await getPosts();
 

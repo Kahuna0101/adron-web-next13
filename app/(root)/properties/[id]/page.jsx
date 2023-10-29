@@ -6,6 +6,20 @@ import { getProperty } from "@/lib/actions/property.actions";
 import { MapPin } from "lucide-react";
 import Link from "next/link";
 
+// Metadata
+export async function generateMetadata({ params }) {
+  const property = await getProperty(params.id);
+
+  return {
+    title: property.title,
+    other: {
+    "og:url": "adronhomesproperties.com",
+    "og:image": "https://res.cloudinary.com/daamcwt3y/image/upload/v1693341349/logo_n24gyg.jpg",
+    "og:type": "website",
+    }
+  }
+}
+
 export default async function Page({ params }) {
   const property = await getProperty(params.id);
 

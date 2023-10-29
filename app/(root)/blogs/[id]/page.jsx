@@ -1,8 +1,19 @@
-
-import NewsletterForm from "@/components/forms/NewsletterForm";
 import BlogPost from "@/components/shared/BlogPost";
 import RecentPosts from "@/components/shared/RecentPosts";
 import { getPost } from "@/lib/actions/blog.action";
+
+export async function generateMetadata({ params }) {
+  const blog = await getPost(params.id);
+
+  return {
+    title: blog.title,
+    other: {
+    "og:url": "adronhomesproperties.com",
+    "og:image": "https://res.cloudinary.com/daamcwt3y/image/upload/v1693341349/logo_n24gyg.jpg",
+    "og:type": "website",
+    }
+  }
+}
 
 export default async function Page({ params }) {
   const blog = await getPost(params.id);
