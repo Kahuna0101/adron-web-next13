@@ -89,7 +89,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center mt-14">
+{/*      <div className="flex justify-center items-center mt-14">
         <div className="flex flex-row gap-1 border rounded-full justify-center items-center w-fit p-4">
           <p className="text-base md:text-xl font-semibold text-gray-500">
             Want to work with us?
@@ -100,7 +100,7 @@ const Page = () => {
             </Button>
           </Link>
         </div>
-      </div>
+          </div> */}
     </section>
   );
 };
