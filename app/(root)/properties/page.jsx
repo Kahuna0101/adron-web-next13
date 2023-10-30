@@ -1,5 +1,7 @@
 import AllProperties from "@/components/shared/AllProperties";
 import { getProperties } from "@/lib/actions/property.actions";
+import { Suspense } from "react";
+import Loading from "../loading";
 
 export const metadata = {
   title: 'Properties',
@@ -15,7 +17,9 @@ export default async function Page() {
         <h1 className="text-3xl md:text-6xl font-semibold text-center">
           {!properties.length ? "There are no Properties" : "All Properties"}
         </h1>
-        <AllProperties properties={properties}/>
+        <Suspense fallback={<Loading />}>
+          <AllProperties properties={properties}/>
+        </Suspense>
       </div>
       </div>
     </section>

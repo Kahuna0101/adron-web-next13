@@ -2,6 +2,8 @@ import ContactForm from "@/components/forms/ContactForm";
 import ContactLocation from "@/components/shared/ContactLocation";
 import { locations } from "@/constants";
 import Link from "next/link";
+import { Suspense } from "react";
+import Loading from "../loading";
 
 export const metadata = {
   title: 'Contact',
@@ -18,6 +20,7 @@ const Page = () => {
           <p className="font-medium text-gray-500 text-lg mb-4">
             We'd love to talk about how we can help you.
           </p>
+          <Suspense fallback={<Loading />}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d679.392745725764!2d3.363629843431027!3d6.632153803660149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9395bf1b04b3%3A0xed6caf2f76974982!2sAdron%20Homes%20%26%20Properties%20Limited!5e0!3m2!1sen!2sng!4v1681743005362!5m2!1sen!2sng"
             width="100%"
@@ -26,6 +29,7 @@ const Page = () => {
             loading="lazy"
             className="mb-6"
           ></iframe>
+          </Suspense>
 
           <div className="flex flex-wrap gap-4 justify-between">
             <div>

@@ -1,5 +1,7 @@
 import AllPosts from "@/components/shared/AllPosts";
 import { getPosts } from "@/lib/actions/blog.action";
+import { Suspense } from "react";
+import Loading from "../loading";
 
 export const metadata = {
   title: 'Blogs',
@@ -15,9 +17,10 @@ export default async function Page() {
         <h1 className="text-3xl md:text-6xl font-semibold text-center">
           {!posts.length ? "There are no Posts" : "All Blogs & News"}
         </h1>
-        <AllPosts
-          posts={posts}
-        />
+
+        <Suspense fallback={<Loading />}>
+          <AllPosts posts={posts} />
+        </Suspense>
       </div>
       </div>
     </section>

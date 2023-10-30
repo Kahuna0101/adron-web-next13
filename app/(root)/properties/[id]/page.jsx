@@ -1,3 +1,4 @@
+
 import PhotoSlider from "@/components/shared/PhotoSlider";
 import PropertyStats from "@/components/shared/PropertyStats";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { getProperty } from "@/lib/actions/property.actions";
 import { MapPin } from "lucide-react";
 import Link from "next/link";
+import { Suspense } from "react";
+import Loading from "../../loading";
 
 // Metadata
 export async function generateMetadata({ params }) {
@@ -152,14 +155,16 @@ export default async function Page({ params }) {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="w-fill sm:w-[560px] md:w-[500px] min-[912px]:w-[600px] lg:w-[650px] h-[350px]">
-                  <iframe
+              <div className="w-fill sm:w-[560px] md:w-[500px] min-[912px]:w-[600px] lg:w-[650px] h-[350px]">
+                <Suspense fallback={<Loading />}>
+                <iframe
                   style={{ top: 0, bottom: 0 }}
                   width="100%"
                   height="100%"
                   src={`https://www.youtube.com/embed/${youTubeVideo}`}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 />
+                </Suspense>
                 </div>
               </CardContent>
             </Card>
@@ -175,12 +180,14 @@ export default async function Page({ params }) {
               </CardHeader>
               <CardContent>
                 <div className="w-fill sm:w-[560px] md:w-[500px] min-[912px]:w-[600px] lg:w-[650px] h-[350px]">
+                  <Suspense fallback={<Loading />}>
                   <iframe
                   style={{ top: 0, bottom: 0 }}
                   width="100%"
                   height="100%"
                   src={property.panorama}
                 />
+                  </Suspense>
                 </div>
               </CardContent>
             </Card>

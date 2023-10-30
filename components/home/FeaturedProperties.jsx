@@ -15,7 +15,8 @@ export default async function FeaturedProperties() {
         <p className="text-2xl font-normal mt-4 mb-8 px-8 text-center">
           A selection of our best properties
         </p>
-        <PropertySlider featuredProperties={result} />
+          <PropertySlider featuredProperties={result} />
+        
         <div className="flex justify-center">
           <Link href="/properties">
             <Button className="mt-6 px-8 py-6 bg-green-500 hover:bg-green-600 text-white text-lg font-semibold flex items-center gap-2 transition-transform duration-300 ease-in-out hover:transform hover:scale-105">

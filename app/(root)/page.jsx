@@ -2,6 +2,7 @@ import {
   FeaturedProperties,
   FindEstates,
   Hero,
+  Promos,
   Testimonials,
   TheTeam,
 } from "@/components/home";
@@ -10,7 +11,7 @@ const Page = () => {
   return (
     <>
       <Hero />
-      {/*<PromoSlider />*/}
+      <Promos />
       <FeaturedProperties />
       <FindEstates />
       <TheTeam />

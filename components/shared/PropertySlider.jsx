@@ -18,7 +18,7 @@ const PropertySlider = ({ featuredProperties }) => {
         loop={true}
         spaceBetween={10}
         centeredSlides={true}
-        autoplay={{ delay: 2000, disableOnInteraction: true }}
+        autoplay={{ delay: 2000 }}
         breakpoints={{
           // when window width is >= 768px (medium devices)
           768: {
