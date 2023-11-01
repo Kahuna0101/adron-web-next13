@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
             s1.charset='UTF-8';
             s1.setAttribute('crossorigin','*');
             s0.parentNode.insertBefore(s1,s0);
-            })(); 
+            })();
         `}
       </script>
         </body>
