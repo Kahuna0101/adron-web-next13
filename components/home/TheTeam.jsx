@@ -8,7 +8,7 @@ const TheTeam = () => {
     <section>
       <div className="w-full py-12 px-12 md:px-36">
         <h2 className="text-5xl md:text-6xl font-medium text-center">
-        Meet The Team
+        Meet Our Team of Experts
       </h2>
       <p className="text-2xl font-normal mt-4 mb-8 text-center">
         The best in the industry, at your service 24/7

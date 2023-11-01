@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
-    const { email } = await req.json();
+    const { firstname, lastname, email, phone, subscriber, estate, numberOfPlots, message, contactMethod, refName, refPhone, consent } = await req.json();
 
     const user = process.env.EMAIL_USER;
 
@@ -45,6 +45,7 @@ export async function POST(req) {
                             <p>Contact Method: ${contactMethod}<p/>
                             <p>Name Of Agent: ${refName}<p/>
                             <p>Contact of Agent: ${refPhone}<p/>
+                            <p>Consent: ${consent}</p>
                         </div>
                     </div>
                 </div>

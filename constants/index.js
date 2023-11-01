@@ -20,8 +20,8 @@ export const contactUs = [
   },
   {
     id: 2,
-    name: "+2349058590355",
-    link: "tel:+2349058590355",
+    name: "+2349058590356",
+    link: "tel:+2349058590356",
     icon: <HiPhoneArrowUpRight />,
   },
   {
@@ -32,8 +32,8 @@ export const contactUs = [
   },
   {
     id: 4,
-    name: "+2349058590356",
-    link: "tel:+2349058590356",
+    name: "+2349058590355",
+    link: "tel:+2349058590355",
     icon: <HiPhoneArrowUpRight />,
   },
   {
@@ -50,6 +50,7 @@ export const workWithUs = [
   { id: 3, name: "About", link: "/about" },
   { id: 4, name: "Contact", link: "/contact" },
   { id: 5, name: "Blog", link: "/blogs" },
+  { id: 6, name: "Careers", link: "/careers" },
 ];
 
 export const socialLink = [
@@ -802,4 +803,33 @@ export const estates = [
   { id: 42, value: "Manhattan Park & Gardens Phase 2", name: "Manhattan Park & Gardens Phase 2"},
   { id: 43, value: "Emirate Park & Gardens Phase 1 (The Eden)", name: "Emirate Park & Gardens Phase 1 (The Eden)"},
   { id: 44, value: "Emirate Park & Gardens Phase 2 (Paradise Estate)", name: "Emirate Park & Gardens Phase 2 (Paradise Estate)"},
+]
+
+// Career Page
+
+export const works = [
+  {
+      id:1,
+      image:"/work1.png",
+      title:'Purposeful Work',
+      description:"Join a team driven by purpose and passion. Our work goes beyond bricks and mortar; it's about making a positive impact on people's lives through thoughtful, sustainable, and innovative real estate solutions.",
+  },
+  {
+      id:2,
+      image:"/work2.png",
+      title:'Collaborative Environment',
+      description:"Experience a dynamic and collaborative work environment where your ideas are valued. We foster a culture of teamwork, diversity, and inclusion, recognizing that our collective strength drives our success.",
+  },
+  {
+      id:3,
+      image:"/work3.png",
+      title: 'Professional Growth',
+      description:"Adron Homes is dedicated to helping you grow in your career. Take advantage of continuous learning opportunities, mentorship programs, and a clear career path that aligns with your aspirations.",
+  },
+  {
+    id:4,
+    image:"/work4.png",
+    title: 'Innovation',
+    description:"Be part of a company that embraces innovation. We believe in staying ahead of industry trends and leveraging cutting-edge technology to deliver exceptional results. Your creativity and fresh perspectives are welcomed here.",
+},
 ]

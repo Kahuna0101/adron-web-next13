@@ -1,8 +1,13 @@
-
 import PhotoSlider from "@/components/shared/PhotoSlider";
 import PropertyStats from "@/components/shared/PropertyStats";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { getProperty } from "@/lib/actions/property.actions";
 import { MapPin } from "lucide-react";
 import Link from "next/link";
@@ -16,11 +21,12 @@ export async function generateMetadata({ params }) {
   return {
     title: property.title,
     other: {
-    "og:url": "adronhomesproperties.com",
-    "og:image": "https://res.cloudinary.com/daamcwt3y/image/upload/v1693341349/logo_n24gyg.jpg",
-    "og:type": "website",
-    }
-  }
+      "og:url": "adronhomesproperties.com",
+      "og:image":
+        "https://res.cloudinary.com/daamcwt3y/image/upload/v1693341349/logo_n24gyg.jpg",
+      "og:type": "website",
+    },
+  };
 }
 
 export default async function Page({ params }) {
@@ -129,15 +135,18 @@ export default async function Page({ params }) {
                 </p>
                 <p>
                   Building Approval-Duplex: ₦{" "}
-                  {(property.approvalDuplex.toLocaleString())}
+                  {property.approvalDuplex.toLocaleString()}
                 </p>
                 <p>
                   Building Approval-Bungalow: ₦{" "}
-                  {(property.approvalBungalow.toLocaleString())}
+                  {property.approvalBungalow.toLocaleString()}
                 </p>
               </CardContent>
               <CardFooter>
-                <p className="font-semibold text-lg text-gray-500 dark:text-slate-400">Note: ₦ 0 means "To be Determined after physical allcation, subject to prevailing Govt. Assessment</p>
+                <p className="font-semibold text-lg text-gray-500 dark:text-slate-400">
+                  Note: ₦ 0 means "To be Determined after physical allcation,
+                  subject to prevailing Govt. Assessment
+                </p>
               </CardFooter>
             </Card>
           ) : (
@@ -146,8 +155,8 @@ export default async function Page({ params }) {
         </div>
 
         <div className="mt-8 flex flex-col 2xl:flex-row gap-6 md:gap-4 justify-between w-full">
-          <div className="flex">
-            <Card>
+          <div className="flex-1">
+            <Card className="w-full">
               <CardHeader>
                 <CardTitle>
                   Video Walkthrough
@@ -155,23 +164,23 @@ export default async function Page({ params }) {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-              <div className="w-fill sm:w-[560px] md:w-[500px] min-[912px]:w-[600px] lg:w-[650px] h-[350px]">
-                <Suspense fallback={<Loading />}>
-                <iframe
-                  style={{ top: 0, bottom: 0 }}
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${youTubeVideo}`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                />
-                </Suspense>
+                <div className="w-full h-96">
+                  <Suspense fallback={<Loading />}>
+                    <iframe
+                      className=" w-full h-full"
+                      src={`https://www.youtube.com/embed/${youTubeVideo}`}
+                      title={`${property.title} YouTube Video`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </Suspense>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          <div className="flex">
-            <Card>
+          <div className="flex-1">
+            <Card className="w-full">
               <CardHeader>
                 <CardTitle>
                   3D Virtual Walkthrough
@@ -179,14 +188,14 @@ export default async function Page({ params }) {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="w-fill sm:w-[560px] md:w-[500px] min-[912px]:w-[600px] lg:w-[650px] h-[350px]">
+                <div className="w-full h-96">
                   <Suspense fallback={<Loading />}>
-                  <iframe
-                  style={{ top: 0, bottom: 0 }}
-                  width="100%"
-                  height="100%"
-                  src={property.panorama}
-                />
+                    <iframe
+                      style={{ top: 0, bottom: 0 }}
+                      src={property.panorama}
+                      title={`${property.title} 3D Virtual Video`}
+                      className="w-full h-full"
+                    />
                   </Suspense>
                 </div>
               </CardContent>

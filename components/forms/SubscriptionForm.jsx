@@ -168,7 +168,7 @@ const SubscriptionForm = () => {
                 </FormLabel>
                 <FormControl>
                   <Input
-                    type="text"
+                    type="tel"
                     placeholder="Phone Number"
                     {...field}
                     className="account-form_input no-focus"

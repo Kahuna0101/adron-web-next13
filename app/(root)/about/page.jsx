@@ -6,9 +6,8 @@ import AgentCard from "@/components/cards/AgentCard";
 import Counter from "@/components/shared/Counter";
 
 export const metadata = {
-  title: 'About',
-}
-
+  title: "About",
+};
 
 const Page = () => {
   return (
@@ -30,7 +29,7 @@ const Page = () => {
               alt={objective.title}
               className="w-auto h-auto"
             />
-          <div>
+            <div>
               <h3 className="text-2xl font-semibold">{objective.title}</h3>
               <p className="text-lg text-gray-500">{objective.description}</p>
             </div>
@@ -40,7 +39,7 @@ const Page = () => {
 
       <div className="flex flex-col md:flex-row justify-center items-center my-[90px] gap-20">
         <div className="flex flex-col items-center">
-          <Counter end={11}/>
+          <Counter end={11} />
           <p className="text-3xl font-semibold text-slate-500 text-center">
             Years in the <br /> Real-Estate Business
           </p>
@@ -77,30 +76,30 @@ const Page = () => {
         {/* Team Members */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {agents.map((agent) => (
-            <AgentCard 
+            <AgentCard
               key={agent.id}
               name={agent.name}
               image={agent.image}
               description={agent.description}
               title={agent.title}
-              social={agent.social} 
+              social={agent.social}
             />
           ))}
         </div>
       </div>
 
-{/*      <div className="flex justify-center items-center mt-14">
+      <div className="flex justify-center items-center mt-14">
         <div className="flex flex-row gap-1 border rounded-full justify-center items-center w-fit p-4">
           <p className="text-base md:text-xl font-semibold text-gray-500">
             Want to work with us?
           </p>
-          <Link href="/contact">
+          <Link href="/careers">
             <Button className="text-lg font-medium text-green-500 hover:text-black dark:hover:text-green-500 bg-transparent dark:bg-transparent hover:bg-transparent dark:hover:bg-transparent">
               We are hiring 👔
             </Button>
           </Link>
         </div>
-          </div> */}
+      </div>
     </section>
   );
 };
