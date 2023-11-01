@@ -25,12 +25,12 @@ export default function Hero() {
   }, [currentIndex, words]);
 
   return (
-    <div className="text-white pb-8 w-full min-h-screen">
+    <div className="text-white w-full min-h-screen">
       <div className="absolute w-80 h-80 dark:bg-white bg-opacity-50 filter blur-[100px] rounded-full" />
 
       <div className="flex flex-wrap items-center justify-center gap-24 px-10 md:px-16 py-16 md:py-36">
         {/* Left Side */}
-        <div className="flex flex-col  gap-4 relative z-[1]">
+        <div className="flex flex-col mt-5 gap-4 relative z-[1]">
           <div className="h-12 md:h-16 w-12 md:w-16 bg-green-500 rounded-full relative left-[10rem] md:left-[17rem] top-16 md:top-[90px] z-[-1]" />
 
           <div>
@@ -86,7 +86,7 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="h-12 w-32 font-semibold text-white text-sm flex items-center justify-center bottom-0 left-[35%] md:left-[40%] lg:left-[48%] bg-green-500 rounded-xl absolute animate-bounce">
+      <div className="h-12 w-32 font-semibold text-white text-sm flex items-center md:bottom-28 relative justify-center left-[35%] md:left-[40%] lg:left-[48%] bg-green-500 rounded-xl animate-bounce">
         <CornerLeftDown />
         Scroll down
         <CornerRightDown />

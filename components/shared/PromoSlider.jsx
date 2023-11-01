@@ -36,7 +36,7 @@ export default function PromoSlider({ promos }) {
             <div className='w-full relative min-h-screen flex justify-start items-center'>
               <Image src={promo.photo} fill alt={promo.title} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
               <div className="container relative top-80">
-                <Link href={promo._id}>
+                <Link href={`/blogs/${promo._id}`}>
                   <Button className="text-white bg-green-500 hover:bg-green-600 py-6 px-7 text-lg font-semibold transition-transform transform hover:scale-105">
                     Read More
                   </Button>
