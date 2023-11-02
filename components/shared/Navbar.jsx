@@ -165,7 +165,7 @@ const Navbar = () => {
                   <span>More</span>
                 </DropdownMenuSubTrigger>
                 <DropdownMenuPortal>
-                  <DropdownMenuSubContent className="hover:bg-green-500 dark:hover:bg-green-500">
+                  <DropdownMenuSubContent>
                     {dropTitle.map((item) => {
                       const isActive = pathname === item.link;
                       return (
