@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req) {
   try {
-    const { email } = await req.json();
+    const { email } = await req.body;
 
   const user = process.env.EMAIL_USER;
 

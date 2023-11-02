@@ -28,9 +28,9 @@ export const metadata = {
       index: true,
       follow: false,
       noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   other: {
@@ -39,7 +39,11 @@ export const metadata = {
     "twitter:image":
       "https://res.cloudinary.com/daamcwt3y/image/upload/v1693341349/logo_n24gyg.jpg",
     "twitter:card": "summary_large_image",
+    "twitter:title": "Adron Homes & Properties",
+    "twitter:description": "Adron Homes and Properties is a leading real estate development company committed to providing exceptional and affordable housing solutions. With a focus on innovation, quality, and customer satisfaction, Adron Homes has established itself as a trusted name in the real estate industry.",
     "og:url": "adronhomesproperties.com",
+    "og:title": "Adron Homes & Properties",
+    "og:description": "Adron Homes and Properties is a leading real estate development company committed to providing exceptional and affordable housing solutions. With a focus on innovation, quality, and customer satisfaction, Adron Homes has established itself as a trusted name in the real estate industry.",
     "og:image":
       "https://res.cloudinary.com/daamcwt3y/image/upload/v1693341349/logo_n24gyg.jpg",
     "og:type": "website",
@@ -60,21 +64,25 @@ export default function RootLayout({ children }) {
             {children}
           </ThemeProvider>
 
-          <script id="tawk" strategy="lazyOnload">
-        {`
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/654263c6f2439e1631eab21b/1he5lbgs2';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-        `}
-      </script>
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+                var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                (function(){
+                  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                  s1.async=true;
+                  s1.src='https://embed.tawk.to/654263c6f2439e1631eab21b/1he5lbgs2';
+                  s1.charset='UTF-8';
+                  s1.setAttribute('crossorigin','*');
+                  s0.parentNode.insertBefore(s1,s0);
+                })();
+              `,
+            }}
+          />
         </body>
       </html>
     </>
   );
 }
+

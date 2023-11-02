@@ -60,15 +60,12 @@ const CareerForm = () => {
       relocate: "",
       currentSalary: "",
       expectedSalary: "",
-      grossSalary: "",
-      expectedGross: "",
-      cv: "",
       consent: false,
     },
   });
 
   const onSubmit = async (data) => {
-   try {
+    try {
       const response = await fetch("/api/nodemailer/career", {
         method: "POST",
         headers: {
@@ -616,15 +613,15 @@ const CareerForm = () => {
                   onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
-                  <SelectTrigger className="w-full font-semibold dark:text-slate-50">
-                    <SelectValue placeholder="Willing to Relocate?" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectItem value="yes">Yes</SelectItem>
-                      <SelectItem value="no">No</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
+                    <SelectTrigger className="w-full font-semibold dark:text-slate-50">
+                      <SelectValue placeholder="Willing to Relocate?" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectGroup>
+                        <SelectItem value="yes">Yes</SelectItem>
+                        <SelectItem value="no">No</SelectItem>
+                      </SelectGroup>
+                    </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
@@ -675,70 +672,6 @@ const CareerForm = () => {
             )}
           />
         </div>
-
-        <div className="flex flex-col md:flex-row gap-5">
-          <FormField
-            control={form.control}
-            name="grossSalary"
-            render={({ field }) => (
-              <FormItem className="flex flex-col w-full">
-                <FormLabel className="text-lg font-medium dark:text-slate-50">
-                  Current Annual Gross Salary:
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    type="number"
-                    placeholder="Current Annual Salary"
-                    className="account-form_input no-focus dark:text-slate-50"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="expectedGross"
-            render={({ field }) => (
-              <FormItem className="flex flex-col w-full">
-                <FormLabel className="text-lg font-medium dark:text-slate-50">
-                  Expected Annual Gross Salary
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    type="number"
-                    placeholder="Expected Annual Salary"
-                    className="account-form_input no-focus dark:text-slate-50"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-
-        <FormField
-          control={form.control}
-          name="cv"
-          render={({ field }) => (
-            <FormItem className="flex flex-col w-full">
-              <FormLabel className="text-lg font-medium dark:text-slate-50">
-                Upload Your CV
-              </FormLabel>
-              <FormControl>
-                <Input
-                  type="file"
-                  className="account-form_input no-focus dark:text-slate-50"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
 
         {/* Consent */}
         <FormField

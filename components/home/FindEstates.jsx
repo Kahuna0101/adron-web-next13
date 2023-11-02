@@ -45,7 +45,7 @@ const FindEstates = () => {
                 </CardContent>
                 <CardFooter>
                   <Link href="/properties">
-                    <Button className="text-base md:text-lg font-medium gap-2 text-green-500 hover:text-black bg-transparent hover:bg-transparent">
+                    <Button className="text-base md:text-lg truncate font gap-2 text-green-500 hover:text-black bg-transparent hover:bg-transparent">
                       {about.purpose} <ArrowRight />
                     </Button>
                   </Link>
