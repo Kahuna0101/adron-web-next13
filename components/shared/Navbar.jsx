@@ -68,12 +68,13 @@ const Navbar = () => {
           src="/logo.png"
           alt="Adron Homes"
           priority={true}
-          width={80}
+          width={60}
           height={20}
           className="w-auto h-auto"
         />
       </Link>
-
+      <Image src="/christrees.png" width={50} height={50} alt="Christmans Trees" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="animate-bounce absolute hidden lg:block left-56"/>
+     
       {/* Desktop View */}
       <NavigationMenu className="max-md:hidden">
         <NavigationMenuList>
@@ -136,8 +137,8 @@ const Navbar = () => {
             >
               <Image
                 src="/hamburger-menu.svg"
-                height={40}
-                width={40}
+                height={30}
+                width={30}
                 alt="menu"
               />
             </DropdownMenuTrigger>
@@ -188,6 +189,7 @@ const Navbar = () => {
               </DropdownMenuSub>
             </DropdownMenuContent>
           </DropdownMenu>
+          
         </div>
 
         {/*Mode Toggle*/}
@@ -211,6 +213,7 @@ const Navbar = () => {
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
+        <Image src="/christrees.png" width={50} height={50} alt="Christmans Trees" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="animate-bounce absolute right-40 md:right-28"/>
       </div>
     </nav>
   );
