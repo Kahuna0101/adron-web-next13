@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
             disableTransitionOnChange
           >
             {children}
-            <Analytics />
+            <Analytics mode={'production'}/>
           </ThemeProvider>
 
           <script
