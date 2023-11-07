@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
 
@@ -41,10 +43,12 @@ export const metadata = {
       "https://res.cloudinary.com/daamcwt3y/image/upload/v1693341349/logo_n24gyg.jpg",
     "twitter:card": "summary_large_image",
     "twitter:title": "Adron Homes & Properties",
-    "twitter:description": "Adron Homes and Properties is a leading real estate development company committed to providing exceptional and affordable housing solutions. With a focus on innovation, quality, and customer satisfaction, Adron Homes has established itself as a trusted name in the real estate industry.",
+    "twitter:description":
+      "Adron Homes and Properties is a leading real estate development company committed to providing exceptional and affordable housing solutions. With a focus on innovation, quality, and customer satisfaction, Adron Homes has established itself as a trusted name in the real estate industry.",
     "og:url": "adronhomesproperties.com",
     "og:title": "Adron Homes & Properties",
-    "og:description": "Adron Homes and Properties is a leading real estate development company committed to providing exceptional and affordable housing solutions. With a focus on innovation, quality, and customer satisfaction, Adron Homes has established itself as a trusted name in the real estate industry.",
+    "og:description":
+      "Adron Homes and Properties is a leading real estate development company committed to providing exceptional and affordable housing solutions. With a focus on innovation, quality, and customer satisfaction, Adron Homes has established itself as a trusted name in the real estate industry.",
     "og:image":
       "https://res.cloudinary.com/daamcwt3y/image/upload/v1693341349/logo_n24gyg.jpg",
     "og:type": "website",
@@ -63,6 +67,7 @@ export default function RootLayout({ children }) {
             disableTransitionOnChange
           >
             {children}
+            <Analytics />
           </ThemeProvider>
 
           <script
@@ -86,4 +91,3 @@ export default function RootLayout({ children }) {
     </>
   );
 }
-
