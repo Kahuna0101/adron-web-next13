@@ -75,14 +75,14 @@ const SubscriptionForm = () => {
     },
   ];
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (values) => {
     try {
       const response = await fetch("/api/nodemailer/subscription", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(values),
       });
 
       if (response.ok) {
