@@ -33,6 +33,7 @@ import { useEffect, useState } from "react";
 
 const SubscriptionForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // Added loading state
 
   const form = useForm({
     resolver: zodResolver(SubscriptionValidation),
@@ -77,6 +78,8 @@ const SubscriptionForm = () => {
 
   const onSubmit = async (values) => {
     try {
+      setIsLoading(true); // Set loading state to true during submission
+
       const response = await fetch("/api/nodemailer/subscription", {
         method: "POST",
         headers: {
@@ -93,6 +96,8 @@ const SubscriptionForm = () => {
       }
     } catch (error) {
       console.error("Error:", error);
+    } finally {
+      setIsLoading(false); // Set loading state back to false after submission (whether successful or not)
     }
   };
 
@@ -357,9 +362,11 @@ const SubscriptionForm = () => {
 
         <Button
           type="submit"
-          className="bg-green-400 hover:bg-green-700 p-6 text-xl"
+          className={`bg-green-400 hover:bg-green-700 p-6 text-xl ${
+            isLoading ? 'cursor-not-allowed' : '' // Disable button during loading
+          }`}
         >
-          Submit
+          {isLoading ? 'Loading...' : 'Submit'}
         </Button>
 
         {isSubmitted? (

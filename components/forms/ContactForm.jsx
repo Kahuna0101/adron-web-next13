@@ -20,6 +20,7 @@ import { useEffect, useState } from "react";
 
 const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // Added loading state
 
   const form = useForm({
     resolver: zodResolver(ContactValidation),
@@ -34,6 +35,8 @@ const ContactForm = () => {
 
   const onSubmit = async (values) => {
     try {
+      setIsLoading(true); // Set loading state to true during submission
+
       const response = await fetch("/api/nodemailer/contact", {
         method: "POST",
         headers: {
@@ -50,6 +53,8 @@ const ContactForm = () => {
       }
     } catch (error) {
       console.error("Error:", error);
+    } finally {
+      setIsLoading(false); // Set loading state back to false after submission (whether successful or not)
     }
   };
 
@@ -178,9 +183,11 @@ const ContactForm = () => {
 
         <Button
           type="submit"
-          className="bg-green-400 hover:bg-green-700 p-6 text-xl"
+          className={`bg-green-400 hover:bg-green-700 p-6 text-xl ${
+            isLoading ? 'cursor-not-allowed' : '' // Disable button during loading
+          }`}
         >
-          Submit
+         {isLoading ? 'Loading...' : 'Submit'}
         </Button>
 
         {isSubmitted? (

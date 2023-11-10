@@ -31,6 +31,7 @@ import { CareerValidation } from "@/lib/validations/CareerValidation";
 
 const CareerForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // Added loading state
 
   const form = useForm({
     resolver: zodResolver(CareerValidation),
@@ -66,6 +67,8 @@ const CareerForm = () => {
 
   const onSubmit = async (values) => {
     try {
+      setIsLoading(true); // Set loading state to true during submission
+
       const response = await fetch("/api/nodemailer/career", {
         method: "POST",
         headers: {
@@ -82,6 +85,8 @@ const CareerForm = () => {
       }
     } catch (error) {
       console.error("Error:", error);
+    } finally {
+      setIsLoading(false); // Set loading state back to false after submission (whether successful or not)
     }
   };
 
@@ -698,9 +703,11 @@ const CareerForm = () => {
 
         <Button
           type="submit"
-          className="bg-green-400 hover:bg-green-700 p-6 text-xl"
+          className={`bg-green-400 hover:bg-green-700 p-6 text-xl ${
+              isLoading ? 'cursor-not-allowed' : '' // Disable button during loading
+            }`}
         >
-          Submit
+          {isLoading ? 'Loading...' : 'Submit'}
         </Button>
 
         {isSubmitted ? (

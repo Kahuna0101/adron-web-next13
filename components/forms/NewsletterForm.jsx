@@ -19,6 +19,7 @@ import { CheckCircle } from "lucide-react";
 
 const NewsletterForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // Added loading state
 
   const form = useForm({
     resolver: zodResolver(EmailValidation),
@@ -29,6 +30,8 @@ const NewsletterForm = () => {
 
   const onSubmit = async (values) => {
     try {
+      setIsLoading(true); // Set loading state to true during submission
+
       const response = await fetch("/api/nodemailer/newsletter", {
         method: "POST",
         headers: {
@@ -44,6 +47,8 @@ const NewsletterForm = () => {
       }
     } catch (error) {
       console.error("Error:", error);
+    } finally {
+      setIsLoading(false); // Set loading state back to false after submission (whether successful or not)
     }
   };
 
@@ -94,9 +99,11 @@ const NewsletterForm = () => {
 
           <Button
             type="submit"
-            className="absolute right-1 bg-green-500 hover:bg-green-700 text-base rounded-3xl"
+            className={`absolute right-1 bg-green-500 hover:bg-green-700 text-base rounded-3xl ${
+              isLoading ? 'cursor-not-allowed' : '' // Disable button during loading
+            }`}
           >
-            Subscribe
+            {isLoading ? 'Loading...' : 'Subscribe'} {/* Change button text during loading */}
           </Button>
         </form>
       </Form>
