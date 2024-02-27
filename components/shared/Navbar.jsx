@@ -73,7 +73,6 @@ const Navbar = () => {
           className="w-auto h-auto"
         />
       </Link>
-      <Image src="/christrees.png" width={50} height={50} alt="Christmans Trees" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="animate-bounce absolute hidden lg:block left-56"/>
      
       {/* Desktop View */}
       <NavigationMenu className="max-md:hidden">
